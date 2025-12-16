@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Driving Runner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- WELCOME SCREEN -->
+  <div id="welcomeScreen" class="overlay">
+    <div class="panel">
+      <h1 class="bigTitle">DRIVING RUNNER</h1>
+      <button id="enterGameBtn">START</button>
+    </div>
+  </div>
+
+  <h1 id="title" class="hidden">DRIVING RUNNER</h1>
+  <div id="scoreBox" class="hidden">Score: 0</div>
+
+  <canvas id="gameCanvas" width="300" height="500" class="hidden"></canvas>
+
+  <!-- VEHICLE SELECTION SCREEN -->
+<div id="vehicleScreen" class="overlay hidden">
+  <div class="panel">
+    <h2>Select Your Vehicle</h2>
+
+    <button class="vehicleBtn" data-vehicle="car">🚗 Car (Balanced)</button>
+    <button class="vehicleBtn" data-vehicle="bike">🏍 Bike (Fast & Small)</button>
+    <button class="vehicleBtn" data-vehicle="truck">🚚 Truck (Slow but Safe)</button>
+
+    <button id="confirmVehicleBtn">Confirm</button>
+  </div>
+</div>
+  <!-- MODE SELECTION SCREEN -->
+  <div id="modeScreen" class="overlay hidden">
+    <div class="panel">
+      <h2>Select Game Mode</h2>
+      <button class="modeBtn" data-mode="story">Story Mode</button>
+      <button class="modeBtn" data-mode="linear">Linear Levels</button>
+      <button class="modeBtn" data-mode="free">Free Missions</button>
+      <button class="modeBtn" data-mode="season">Season Mode</button>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div id="startScreen" class="overlay hidden">
+    <div class="panel">
+      <h2 id="missionTitle">Mission</h2>
+      <p id="missionDesc">Description</p>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div id="gameOverScreen" class="overlay hidden">
+    <div class="panel">
+      <h2>Mission Result</h2>
+      <p id="missionStatus">Failed</p>
+      <p id="finalScore">Score: 0</p>
+      <p id="bestScore">High Score: 0</p>
+      <button id="restartBtn">Restart Mission</button>
+      <button id="menuBtn">Main Menu</button>
+    </div>
+  </div>
+
+  <!-- LEVEL COMPLETE -->
+  <div id="levelCompleteScreen" class="overlay hidden">
+    <div class="panel">
+      <h2>LEVEL COMPLETE!</h2>
+      <p id="completedMissionTitle">Mission Done</p>
+      <button id="nextLevelBtn">Next Level</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
