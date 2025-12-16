@@ -1,0 +1,239 @@
+/* BODY */
+body {
+  background: radial-gradient(circle at top, #0a0a0a, #000000 70%);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* NEON TITLE */
+#title {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #00eaff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px #00eaff, 0 0 25px #00bcd4;
+}
+
+/* CANVAS */
+canvas {
+  background: linear-gradient(180deg, #0909092d, #0f0d0f);
+  border-radius: 14px;
+  border: 3px solid #00eaff55;
+  box-shadow: 
+      0 0 15px #00eaff55,
+      inset 0 0 15px #00eaff33;
+}
+
+/* SCORE BOX */
+#scoreBox {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(0, 255, 255, 0.08);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 12px #00eaff55;
+  color: #00eaff;
+  backdrop-filter: blur(6px);
+}
+
+/* OVERLAY SCREENS */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 3, 3, 0.75);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.hidden {
+  display: none;
+}
+
+/* PANELS */
+.panel {
+  background: rgba(10, 10, 20, 0.75);
+  padding: 30px;
+  width: 340px;
+  border-radius: 14px;
+  border: 1px solid #00eaff44;
+  text-align: center;
+  box-shadow: 
+     0 0 25px #00eaff55,
+     inset 0 0 15px #00eaff22;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaffaa;
+  font-size: 24px;
+}
+
+.panel p {
+  font-size: 15px;
+  color: #d8faff;
+  margin: 8px 0;
+}
+
+/* BUTTONS */
+.panel button,
+.modeBtn,
+#nextLevelBtn {
+  width: 90%;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  box-shadow: 0 0 12px #00bcd4aa, 0 0 20px #007bff88;
+  transition: 0.2s;
+}
+
+.panel button:hover,
+.modeBtn:hover,
+#nextLevelBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00eaffbb, 0 0 30px #0099ffbb;
+}
+
+/* MODE BUTTONS */
+.modeBtn {
+  width: 100%;
+  background: linear-gradient(90deg, #0088ff, #00eaff);
+}
+
+/* RESPONSIVE */
+@media (max-width: 420px) {
+  canvas { transform: scale(0.92); }
+  #scoreBox { top: 60px; font-size: 16px; }
+  #title { font-size: 26px; }
+}
+.bigTitle {
+  font-size: 32px;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff, 0 0 40px #0099ff;
+  margin-bottom: 20px;
+}
+
+#enterGameBtn {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00eaff99;
+}
+
+#enterGameBtn:hover {
+  transform: scale(1.05);
+}
+.vehicleBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #007bff, #00eaff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00eaff88;
+}
+
+.vehicleBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00eaffaa;
+}
+
+#confirmVehicleBtn {
+  width: 90%;
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#nitroBarContainer {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+  left: 10%;
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.2);
+  
+  overflow: hidden;
+}
+
+#nitroBar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  box-shadow: 0 0 20px #00eaff;
+  transition: width 0.2s linear;
+}
+
+.nitroGlow {
+  box-shadow: 0 0 30px #00eaff, 0 0 60px #0099ff;
+}
+/* MOBILE CONTROLS */
+#mobileControls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  padding: 0 30px;
+  pointer-events: auto;
+}
+
+#mobileControls button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background: radial-gradient(circle, #00eaff, #007bff);
+  box-shadow: 0 0 20px #00eaff;
+}
+
+/* show only on mobile */
+@media (max-width: 768px) {
+  #mobileControls {
+    display: flex;
+  }
+}
+
